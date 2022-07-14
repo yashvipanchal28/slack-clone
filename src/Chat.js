@@ -8,7 +8,6 @@ import { doc, onSnapshot, orderBy, collection } from "firebase/firestore";
 import Message from "./Message.js";
 import ChatInput from "./ChatInput.js";
 
-
 function Chat() {
 	const { roomId } = useParams();
 	const [roomDetails, setRoomDetails] = useState(null);
@@ -44,7 +43,7 @@ function Chat() {
 					<Message key={timestamp} message={message} timestamp={timestamp} user={user} userImage={userImage} />
 				))}
 			</div>
-			<ChatInput channelName={roomDetails?.name} />
+			<ChatInput channelName={roomDetails?.name} channelId={roomId} />
 		</div>
 	);
 }

@@ -1,9 +1,11 @@
 .sidebar{
+    overflow-y: scroll;
     color: white;
     flex: 0.3;
     background-color: var(--slack-color);
     border-top: 1px solid #49274b;
     max-width: 260px;
+    padding-bottom: 62px;
 }
 
 .sidebar > hr{
